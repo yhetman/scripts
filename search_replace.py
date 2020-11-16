@@ -33,14 +33,10 @@ def replace(file_path, pattern, subst):
 def func(mypath):
     files = [f for f in listdir(mypath) if isfile(join(mypath, f))]
     for file_path in files:
-        replace(join(mypath, file_path), "By: yhetman <marvin@42.fr>          ", "By: yhetman <yhetman@student.unit.ua>")
-    for file_path in files:
-        replace(join(mypath, file_path), "by yhetman", "by yhetman ")
+        replace(join(mypath, file_path), "/mnt/DATA/work/price-tags/images/", "/root/tags/images/")
 
 def main():
-    func("./libft/srcs/")
-    func("./libft/includes/")
-    func("./libft/srcs/ft_printf/")
+    func("/root/tags/annots/")
 
 
 if __name__ == "__main__":
