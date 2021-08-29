@@ -4,7 +4,7 @@ from os import listdir
 from os.path import isfile, join, splitext
 
 def apply_noise(imge_path, mode):
-	dest = "/home/yhetman/Pictures/price-tags/tags-png/"
+	dest = "/mnt/DATA/work/price-tags/test/"
 	fname = splitext(imge_path)[0]
 	fname = fname + str(mode) + '.png'
 	img = imread(imge_path)/255.0
@@ -25,7 +25,7 @@ def apply_to_all_files(mypath):
 
 
 def main():
-	dir_path="/home/yhetman/Pictures/price-tags/tags-png/noises/"
+	dir_path="/mnt/DATA/work/price-tags/test/"
 	apply_to_all_files(dir_path)
 
 
