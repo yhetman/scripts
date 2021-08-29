@@ -33,10 +33,14 @@ def replace(file_path, pattern, subst):
 def func(mypath):
     files = [f for f in listdir(mypath) if isfile(join(mypath, f))]
     for file_path in files:
-        replace(join(mypath, file_path), "/mnt/DATA/work/price-tags/images/", "/root/tags/images/")
+        if ".png" in file_path or ".jpeg" in file_path:
+            continue
+        replace(join(mypath, file_path), "/home/yhetman/Downloads/service-photos/", "/root/tf2-obj-det/models/research/object_detection/images/test/")
+        replace(join(mypath, file_path), "<folder>service-photos</folder>", "<folder>test</folder>")
 
 def main():
-    func("/root/tags/annots/")
+    func("/root/tf2-obj-det/models/research/object_detection/images/test/")
+#   func("/root/tf2-obj-det/models/research/object_detection/images/train/")
 
 
 if __name__ == "__main__":
